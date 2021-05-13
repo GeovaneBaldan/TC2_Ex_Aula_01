@@ -1,0 +1,20 @@
+<div *ngIf="newPerson">
+    <h2>Register new person</h2>
+	<label> Name:
+		<input type="text" [(ngModel)]="person.name" placeholder="Name" />
+	</label>
+
+<br/><br/>
+
+	<label> Age:
+		<input type="number" [(ngModel)]="person.age" placeholder="0" min="0" step="1" />
+	</label>
+
+<br/><br/>
+	
+	<label> Profile Picture Link:
+		<input type="text" [(ngModel)]="person.profilePic" placeholder="Link"/>
+	</label>
+
+    <button (click)="register()">Register</button>
+</div>

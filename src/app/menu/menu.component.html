@@ -1,0 +1,16 @@
+<h3>List of registered people</h3>
+
+
+<ul>
+    <li (click)="showRegisterForm()">
+        Register new person
+    </li>
+
+    <li *ngFor="let person of peopleList" (click)="pickPerson(person)"
+        [class.picked]="person == pickedPerson">
+        <span><b>{{person.name}}</b></span>
+    </li>
+</ul>
+
+<app-register [newPerson]="newPerson"></app-register>
+<app-profile [person]="pickedPerson"></app-profile>
