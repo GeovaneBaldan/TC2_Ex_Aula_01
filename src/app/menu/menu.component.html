@@ -2,7 +2,7 @@
 
 
 <ul>
-    <li (click)="showRegisterForm()">
+    <li (click)="showRegisterForm()" [class.picked]="newPerson == true">
         Register new person
     </li>
 
@@ -11,6 +11,8 @@
         <span><b>{{person.name}}</b></span>
     </li>
 </ul>
-
-<app-register [newPerson]="newPerson"></app-register>
-<app-profile [person]="pickedPerson"></app-profile>
+<div>
+    <app-register [newPerson]="newPerson"></app-register>
+    
+    <app-profile [person]="pickedPerson"></app-profile>
+</div>

@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
 	
 	pickPerson(person: Person): void {
 		this.pickedPerson = person;
+		this.newPerson = false;
 	}
 	
 	loadPeopleList(): void {
@@ -23,6 +24,7 @@ export class MenuComponent implements OnInit {
 
 	showRegisterForm(): void {
 		this.newPerson = true;
+		this.pickedPerson = null;
 	}
 
 	constructor(private dataService: DataService) { }
